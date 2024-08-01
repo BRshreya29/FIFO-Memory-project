@@ -29,22 +29,25 @@ This project implements a 16-stage, 8-bit wide First-In-First-Out (FIFO) memory 
 
 ![FIFO Simulation](images/simulation.png)
 
-## Project Structure
+## Project Structure 
 
-```plaintext
-fifo-memory/
-├── sources_1/
-│   ├── fifo_mem.v             # Top-level FIFO module
-│   ├── memory_array.v         # Memory array submodule
-│   ├── write_pointer.v        # Write pointer submodule
-│   ├── read_pointer.v         # Read pointer submodule
-│   └── status_signal.v        # Status signals submodule
-├── sim_1/
-│   └── tb_fifo.v              # Testbench for the FIFO memory
-├── images/
-│   ├── fifo_schematic.png     # Schematic of the FIFO design
-│   └── fifo_simulation.png    # Simulation results
-└── README.md
+### Description of Each Component
+
+- **`sources_1/`**: Contains the Verilog source files for the FIFO memory system.
+  - `fifo_mem.v`: The top-level module that integrates all FIFO components.
+  - `memory_array.v`: Defines the memory array used for data storage.
+  - `write_pointer.v`: Manages the write pointer to track write operations.
+  - `read_pointer.v`: Manages the read pointer to track read operations.
+  - `status_signal.v`: Generates status signals like Full, Empty, Overflow, and Underflow.
+
+- **`sim_1/`**: Contains the testbench file used to simulate and verify the FIFO memory functionality.
+  - `tb_fifo.v`: Testbench to validate the FIFO memory design.
+
+- **`images/`**: Includes visual documentation of the FIFO design and simulation results.
+  - `fifo_schematic.png`: A schematic diagram of the FIFO memory system.
+  - `fifo_simulation.png`: A screenshot of the simulation output showing the FIFO operation.
+
+- **`README.md`**: This file, providing an overview and instructions for the project.
 
 ## Usage
 
